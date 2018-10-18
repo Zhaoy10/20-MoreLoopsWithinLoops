@@ -3,8 +3,8 @@ This project demonstrates NESTED LOOPS (i.e., loops within loops)
 in the context of PRINTING on the CONSOLE.
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and YIQI Zhao.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -38,6 +38,14 @@ def run_test_triangle_right_justified():
 
 
 def triangle_right_justified(r):
+    for k in range(r):
+        for i in range(r-k-1):
+            print(' ',end='')
+        for z in range(k+1):
+            print(z+1,end='')
+        print()
+
+
     """
     Prints a triangle of numbers, with r rows.
     It looks the same as a previous example, but right-justified.
@@ -96,6 +104,12 @@ def run_test_triangle_upside_down():
 
 
 def triangle_upside_down(r):
+    for k in range(r):
+        for i in range(k):
+            print(' ',end='')
+        for z in range(r-k):
+            print(z+1,end='')
+        print()
     """
     Prints a triangle of numbers, with r rows.
     It looks the same as the previous problem,
@@ -140,6 +154,18 @@ def run_test_vee():
 
 
 def vee(r):
+    for k in range(r):
+        for s in range(k):
+            print(' ',end='')
+        for n in range(r-k):
+            print(n+1,end='')
+        print('-',end='')
+        for b in range(r-k):
+            print(r-k-b,end='')
+        for g in range(k):
+            print(' ',end='')
+        print()
+
     """
     Prints a "V" of numbers, with r rows.
     It looks like this example, when r = 5:
@@ -191,6 +217,8 @@ def run_test_numbers_constant_forward():
 
 
 def numbers_constant_forward(r, maxnum, n):
+    for k in range(r):
+        for n in range()
     """
     Prints a rectangle of numbers, with r rows.
     Each row has n 1s, then a space, then n 2s,
